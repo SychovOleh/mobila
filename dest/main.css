@@ -1,3 +1,4 @@
+
 @font-face {
   font-family: 'Roboto-Regular', sans-serif;
   src: url(../font/Roboto/Roboto-Regular.ttf); }
@@ -44,6 +45,8 @@
     left: 0;
     display: block;
     background: #AAC1BF;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
     transition: .5s; }
   .burger + .burger__label .burger__line:first-child {
     top: 3px; }
@@ -89,7 +92,11 @@
   width: 100%;
   height: 50px;
   z-index: 3;
+  -webkit-transition: .5s;
+  -o-transition: .5s;
   transition: .5s;
+  -webkit-transition-delay: .5s;
+  -o-transition-delay: .5s;
   transition-delay: .5s;
   overflow: hidden; }
   .burger ~ .nav-mobile > ul {
@@ -99,7 +106,11 @@
     left: 10px; }
     .burger ~ .nav-mobile > ul > li {
       opacity: 0;
+      -webkit-transition: .5s;
+      -o-transition: .5s;
       transition: .5s;
+      -webkit-transition-delay: 0s;
+      -o-transition-delay: 0s;
       transition-delay: 0s; }
       .burger ~ .nav-mobile > ul > li > a {
         font-family: "Roboto-Bold", sans-serif;
@@ -117,28 +128,38 @@
 
 .burger:checked ~ .nav-mobile {
   height: 401px;
+  -webkit-transition-delay: 0s;
+  -o-transition-delay: 0s;
   transition-delay: 0s; }
   .burger:checked ~ .nav-mobile > ul > li {
     opacity: 1;
+    -webkit-transition-delay: .5s;
+    -o-transition-delay: .5s;
     transition-delay: .5s; }
 
 .nav {
   margin: 0 auto;
   display: -webkit-box;
-  display: -ms-flexbox;
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   max-width: 1140px;
   height: 70px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center; }
   @media screen and (max-width: 768px) {
     .nav {
       height: 50px; } }
   .nav__bar {
     display: -webkit-box;
-    display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex; }
     @media screen and (max-width: 768px) {
       .nav__bar {
@@ -167,10 +188,17 @@
   .top-container .top {
     margin: 0 auto;
     display: -webkit-box;
-    display: -ms-flexbox;
     display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-flow: column wrap;
+    -ms-flex-flow: column wrap;
     flex-flow: column wrap;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
     align-items: center;
     max-width: 1140px;
     padding-left: 15px;
@@ -191,9 +219,12 @@
     .top-container .top__photo {
       width: 100%;
       display: -webkit-box;
-      display: -ms-flexbox;
       display: -webkit-flex;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: left;
+      -webkit-justify-content: left;
+      -ms-flex-pack: left;
       justify-content: left; }
       .top-container .top__photo-general {
         max-width: 100%;
