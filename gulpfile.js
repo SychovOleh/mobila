@@ -9,7 +9,7 @@ gulp.task('sass', function () {
   return gulp.src('./src/styles/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
-      browsers: ['last 6 versions'],
+      browsers: ['last 4 versions'],
       cascade: false
     }))
     .pipe(concat('main.css'))
