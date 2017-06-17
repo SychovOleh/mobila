@@ -1,0 +1,58 @@
+.header-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #ffffff;
+    width: 100%;
+}
+// 
+@import "burger-menu.scss";
+// 
+.header-pusher {
+    height: 70px;
+    @media screen and (max-width: 768px) {
+        height: 50px;
+    }
+}
+
+
+
+.nav {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1140px;
+    height: 70px;
+    align-items: center;
+    @media screen and (max-width: 768px) {
+        height: 50px;
+    }
+    &__bar {
+        display: flex;
+        @media screen and (max-width: 768px) {
+            display: none
+        }
+        &-general {
+            color: $green-text;
+            text-decoration: none;
+            font-family: $roboto-bold-font;
+            font-size: 26px;
+            font-weight: bold;
+            padding: 0 15px;
+        }
+        &-link {
+            font-size: 13px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #606060;
+            letter-spacing: 1px;
+            margin: 10px 15px;
+            text-transform: uppercase;
+            &:hover {
+                color: $green-text;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {}

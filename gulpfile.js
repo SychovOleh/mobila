@@ -2,17 +2,15 @@
 
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 
 gulp.task('sass', function () {
-  return gulp.src('./src/styles/**/*.scss')
+  return gulp.src('./src/styles/main.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer({
       browsers: ['last 4 versions'],
       cascade: false
     }))
-    .pipe(concat('main.css'))
     .pipe(gulp.dest('./dest'))
 })
 
