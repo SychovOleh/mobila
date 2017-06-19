@@ -1,95 +1,135 @@
-// 
-@import "reseset.scss";
-// 
-@font-face {
-    font-family: 'Roboto-Regular', sans-serif;
-    src: url(../font/Roboto/Roboto-Regular.ttf);
-}
-
-@font-face {
-    font-family: 'Roboto-Bold', sans-serif;
-    src: url(../font/Roboto/Roboto-Bold.ttf);
-}
-// 
-// @import "variables.scss";
-// 
-$title-font: Helvetica,
-Arial,
-sans-serif;
-$roboto-reg-font: 'Roboto-Regular',
-sans-serif;
-$roboto-bold-font: 'Roboto-Bold',
-sans-serif;
-$brown-text: #606060;
-$black-text: #3A3A3A;
-$white-text: #FFFFFF;
-$green-back: #AAC1BF;
-$green-text: #AAC1BF;
-$white-back: #FFFFFF;
-$grey-back: #F9F9F9;
-$black-back: #2B2B2B;
-$side-pad: 15px;
-$tablet: 768px;
-$mobile-big: 667px;
-$mobile-small: 568px;
-
-@mixin myMixin($value) {
-    padding-left: $value;
-}
-
-.wrapper-of-all {
-    font-family: $roboto-bold-font;
-}
-// 
-@import "header.scss";
-// 
-// @import "top-container.scss";
-.top-container {
-    background-color: $green-back;
-    padding-top: 250px;
-    .top {
+    // 
+    @import "reseset.scss";
+    // 
+    @import "fonts.scss";
+    // 
+    $title-font: Helvetica,
+    Arial,
+    sans-serif;
+    $roboto-reg-font: 'Roboto-Regular',
+    sans-serif;
+    $roboto-bold-font: 'Roboto-Bold',
+    sans-serif;
+    $roboto-blk-font: 'Roboto-Black',
+    sans-serif;
+    $brown-text: #606060;
+    $black-text: #3A3A3A;
+    $white-text: #FFFFFF;
+    $green-back: #AAC1BF;
+    $green-text: #AAC1BF;
+    $white-back: #FFFFFF;
+    $grey-back: #F9F9F9;
+    $black-back: #2B2B2B;
+    $content-width:1140px;
+    $side-pad: 15px;
+    $screen-big:1199px;
+    $screen-small: 991px;
+    $tablet: 767px;
+    $mobile-big: 568px;
+    $mobile-small: 370px;
+    @mixin myMixin($value) {
+        padding-left: $value;
+    }
+    
+    .wrapper-of-all {
+        font-family: $roboto-bold-font;
+    }
+    
+    // 
+    @import "header.scss";
+    // 
+    @import "top-container.scss";
+    // 
+    .features {
+        max-width: $content-width;
         margin: 0 auto;
-        display: flex;
-        flex-flow: column wrap;
-        align-items: center;
-        max-width: 1140px;
-        padding-left: $side-pad;
-        padding-right: $side-pad;
+        padding: 150px 30px;
         &__title {
-            color: $white-text;
-            font-size: 100px;
-            letter-spacing: 8px;
-            font-weight: 900;
             text-align: center;
-            @media screen and (max-width: $mobile-small) {
-                font-size: 60px;
+            font-size: 20px;
+            letter-spacing: 6px;
+            font-weight: bold;
+            text-transform: uppercase;
+            padding-bottom: 20px;
+        }
+        &__content {
+            padding-top: 92px;
+            display: flex;
+            margin: 0 auto;
+            @media screen and (max-width: $screen-big) {
+                max-width: 970px;
+            }
+            @media screen and (max-width: $screen-small) {
+                flex-wrap: wrap;
+            }
+            &-block {
+                &-first {
+                    padding-top: 30px;
+                }
+                &-second {
+                    padding: 0 45px;
+                }
+                &-first,
+                &-second {
+                    @media screen and (max-width: $screen-small) {
+                        max-width: 50%;
+                    }
+                    @media screen and (max-width: $tablet) {
+                        max-width: none;
+                        width: 100%;
+                    }
+                }
+                &-third {
+                    padding-top: 30px;
+                    @media screen and (max-width: $screen-small) {
+                        display: flex;
+                    }
+                    @media screen and (max-width: $tablet) {
+                        display: block;
+                    }
+                }
             }
         }
-        &__subtitle {
-            color: $white-text;
-            font-size: 30px;
-            letter-spacing: 5px;
-            font-weight: 900;
-            padding-top: 30px;
-            text-align: center;
-        }
-        &__photo {
-            // padding-right: 100px; //will delete padding while @media.
-            width: 100%;
-            display: flex;
-            justify-content: left;
-            &-general {
+        &__image {
+            max-width: 360px;
+            height: auto;
+            @media screen and (max-width: $screen-big) {
+                max-width: 293px;
+            }
+            @media screen and (max-width: $screen-small) {
+                max-width: 345px;
+            }
+            @media screen and (max-width: $tablet) {
                 max-width: 100%;
-                height: auto;
+            }
+        }
+        &__item {
+            &-title-wrap {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            &-line {
+                font-size: 1px;
+                border-bottom: solid 1px #EEEEEE;
+                width: 100px;
+                margin: 0 auto;
+            }
+            &-title {
+                font-size: 16px;
+                letter-spacing: 6px;
+                color: #333;
+                text-align: center;
+                padding-top: 25px;
+                padding-bottom: 20px;
+            }
+            &-text {
+                font-size: 14px;
+                letter-spacing: 1px;
+                color: #333;
+                line-height: 28px;
+                text-align: center;
+                padding: 25px 0 80px 0;
             }
         }
     }
-}
-
-// @media screen and (max-width: 768px) {
-//     .top {
-//         &__photo {
-//             // padding-right: 0;
-//         }
-//     }
-// }
