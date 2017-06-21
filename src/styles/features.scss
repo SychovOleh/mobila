@@ -1,0 +1,111 @@
+    .features {
+      &__wrapper {
+        max-width: $content-width;
+        margin: 0 auto;
+        padding: 100px 0;
+        @media screen and (max-width: $screen-small) {
+          max-width: $content-width-small;
+        }
+      }
+      &__title {
+        text-align: center;
+        font-size: 20px;
+        letter-spacing: 6px;
+        font-weight: bold;
+        text-transform: uppercase;
+        &-wrap {
+          padding: 30px 15px 72px 15px;
+        }
+      }
+      &__content {
+        display: flex;
+        margin: 0 auto;
+        @media screen and (max-width: $screen-big) {
+          max-width: 970px;
+        }
+        @media screen and (max-width: $screen-small) {
+          flex-wrap: wrap;
+        }
+        &-block {
+          padding: 0 15px;
+          box-sizing: border-box;
+          &-first {
+            @media screen and (max-width: $screen-small) {
+              margin: auto 0;
+            }
+            @media screen and (max-width: $tablet) {
+              margin: 0;
+            }
+          }
+          &-first,
+          &-second {
+            @media screen and (max-width: $screen-small) {
+              max-width: 50%;
+            }
+            @media screen and (max-width: $tablet) {
+              max-width: none;
+              width: 100%;
+            }
+          }
+          &-third {
+            @media screen and (max-width: $screen-small) {
+              display: flex;
+            }
+            @media screen and (max-width: $tablet) {
+              display: block;
+            }
+          }
+        }
+      }
+      &__image {
+        max-width: 360px;
+        height: auto;
+        @media screen and (max-width: $screen-big) {
+          max-width: 293px;
+        }
+        @media screen and (max-width: $screen-small) {
+          max-width: 345px;
+        }
+        @media screen and (max-width: $tablet) {
+          max-width: 100%;
+        }
+        &-wrap {
+          @media screen and (max-width: $screen-big) {
+            padding-top: 30px;
+          }
+          @media screen and (max-width: $screen-small) {
+            padding-top: 0;
+          }
+        }
+      }
+      &__item {
+        padding: 30px 15px 50px 15px;
+        &-title-wrap {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        &-line {
+          font-size: 0;
+          border-bottom: solid 1px #EEEEEE;
+          width: 100px;
+          margin: 20px auto;
+        }
+        &-title {
+          font-size: 16px;
+          letter-spacing: 6px;
+          color: #333;
+          text-align: center;
+        }
+        &-text {
+          font-size: 14px;
+          letter-spacing: 1px;
+          color: #333;
+          line-height: 28px;
+          text-align: center;
+        }
+        &-icon {
+          padding-bottom: 20px;
+        }
+      }
+    }
