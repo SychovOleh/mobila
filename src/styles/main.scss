@@ -69,6 +69,10 @@ $mobile-small: 370px;
     &-title {
       padding-top: 20px;
       text-align: center;
+      font-size: 20px;
+      letter-spacing: 6px;
+      font-weight: bold;
+      text-transform: uppercase;
     }
     &-line {
       font-size: 0;
@@ -80,34 +84,25 @@ $mobile-small: 370px;
       &-parag {
         padding-bottom: 10px;
         text-align: center;
+        font-size: 14px;
+        letter-spacing: 1px;
+        color: #333;
+        line-height: 28px;
       }
     }
   }
   // 
   &__vid {
+    width: 100%;
+    height: auto;
+    border: solid 1px #EEEEEE;
     &-wrap {
       margin: 0 auto;
+      width: 50%;
       padding-left: 15px;
       padding-right: 15px;
-    }
-  }
-  &__youtube {
-    @media screen and (max-width: $screen-small) {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      opacity: .99;
-    }
-    &-wrap {
       @media screen and (max-width: $screen-small) {
-        position: relative;
-        padding-bottom: 56.25%;
-        /* 16:9 */
-        padding-top: 25px;
-        height: 0;
-        opacity: .99;
+        width: auto;
       }
     }
   }
