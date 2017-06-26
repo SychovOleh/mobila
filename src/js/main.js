@@ -24,4 +24,11 @@ $(document).ready(function() {
       }
     }]
   });
+  $('.faces__wrap').slick({
+    infinite: true,
+    autoplay: true,
+    speed: 500,
+    slidesToShow: 1,
+    autoplaySpeed: 10000
+  });
 });

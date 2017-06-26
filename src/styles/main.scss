@@ -13,7 +13,7 @@ sans-serif;
 $roboto-blk-font: 'Roboto-Black',
 sans-serif;
 $brown-text: #606060;
-$black-text: #3A3A3A;
+$black-text: #333333;
 $white-text: #FFFFFF;
 $green-back: #AAC1BF;
 $green-text: #AAC1BF;
@@ -39,14 +39,46 @@ $mobile-small: 370px;
 
 // 
 @import "header.scss";
-// 
 @import "top-container.scss";
-// 
 @import "features.scss";
-//
 @import "video.scss";
-//
 @import "team.scss";
-//
 @import "screenshots.scss ";
 //
+.faces {
+  background-color: $green-back;
+  &__wrap {
+    padding: 100px 0 110px 0;
+    max-width: 700px;
+    margin: 0 auto;
+    @media screen and(max-width: $screen-big) {
+      max-width: 570px;
+    }
+    @media screen and(max-width: $mobile) {
+      max-width: auto;
+    }
+  }
+  &__item {
+    padding: 0 30px;
+    text-align: center;
+  }
+  &__img {
+    margin: 0 auto;
+    width: 100px;
+    border-radius: 50%;
+  }
+  &__text {
+    padding: 42px 0 15px 0;
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 28px;
+    color: $black-text;
+  }
+  &__info {
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 1.1em;
+    font-weight: 500;
+    color: $white-text;
+  }
+}
