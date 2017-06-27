@@ -1,0 +1,37 @@
+.faces {
+  background-color: $green-back;
+  &__wrap {
+    padding: 100px 0 100px 0;
+    max-width: 700px;
+    margin: 0 auto;
+    @media screen and(max-width: $screen-big) {
+      max-width: 570px;
+    }
+    @media screen and(max-width: $mobile) {
+      max-width: auto;
+    }
+  }
+  &__item {
+    padding: 0 30px;
+    text-align: center;
+  }
+  &__img {
+    margin: 0 auto;
+    width: 100px;
+    border-radius: 50%;
+  }
+  &__text {
+    padding: 42px 0 15px 0;
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 28px;
+    color: $black-text;
+  }
+  &__info {
+    letter-spacing: 1px;
+    font-size: 14px;
+    line-height: 1.1em;
+    font-weight: 500;
+    color: $white-text;
+  }
+}

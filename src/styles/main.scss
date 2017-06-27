@@ -1,84 +1,200 @@
-// 
-@import "reseset.scss";
-// 
-@import "fonts.scss";
-// 
-$title-font: Helvetica,
-Arial,
-sans-serif;
-$roboto-reg-font: 'Roboto-Regular',
-sans-serif;
-$roboto-bold-font: 'Roboto-Bold',
-sans-serif;
-$roboto-blk-font: 'Roboto-Black',
-sans-serif;
-$brown-text: #606060;
-$black-text: #333333;
-$white-text: #FFFFFF;
-$green-back: #AAC1BF;
-$green-text: #AAC1BF;
-$white-back: #FFFFFF;
-$grey-back: #F9F9F9;
-$black-back: #2B2B2B;
-$content-width:1140px;
-$content-width-medium:970px;
-$content-width-small: 750px;
-$side-pad: 15px;
-$screen-big:1199px;
-$screen-small: 991px;
-$tablet: 768px;
-$mobile: 578px;
-$mobile-small: 370px;
-@mixin myMixin($value) {
-  padding-left: $value;
-}
-
-.wrapper-of-all {
-  font-family: $roboto-bold-font;
-}
-
-// 
-@import "header.scss";
-@import "top-container.scss";
-@import "features.scss";
-@import "video.scss";
-@import "team.scss";
-@import "screenshots.scss ";
-//
-.faces {
-  background-color: $green-back;
-  &__wrap {
-    padding: 100px 0 110px 0;
-    max-width: 700px;
-    margin: 0 auto;
-    @media screen and(max-width: $screen-big) {
-      max-width: 570px;
+  // 
+  @import "reseset.scss";
+  // 
+  @import "fonts.scss";
+  // 
+  $title-font: Helvetica,
+  Arial,
+  sans-serif;
+  $roboto-reg-font: 'Roboto-Regular',
+  sans-serif;
+  $roboto-bold-font: 'Roboto-Bold',
+  sans-serif;
+  $roboto-blk-font: 'Roboto-Black',
+  sans-serif;
+  $brown-text: #606060;
+  $black-text: #333333;
+  $white-text: #FFFFFF;
+  $green-back: #AAC1BF;
+  $green-text: #AAC1BF;
+  $white-back: #FFFFFF;
+  $grey-back: #F9F9F9;
+  $black-back: #2B2B2B;
+  $content-width:1140px;
+  $content-width-medium:970px;
+  $content-width-small: 750px;
+  $side-pad: 15px;
+  $screen-big:1199px;
+  $screen-small: 991px;
+  $tablet: 768px;
+  $mobile: 578px;
+  $mobile-small: 370px;
+  @mixin myMixin($value) {
+    padding-left: $value;
+  }
+  
+  .wrapper-of-all {
+    font-family: $roboto-bold-font;
+  }
+  
+  // 
+  @import "header.scss";
+  @import "top-container.scss";
+  @import "features.scss";
+  @import "video.scss";
+  @import "team.scss";
+  @import "screenshots.scss ";
+  @import "faces.scss";
+  //
+  .prices {
+    padding: 100px 0;
+    &__title {
+      text-align: center;
+      font-size: 20px;
+      letter-spacing: 6px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #333333;
+      &-wrap {
+        padding: 20px 0 32px 0;
+      }
+      &-line {
+        font-size: 0;
+        border-bottom: solid 1px #EEEEEE;
+        width: 100px;
+        margin: 20px auto;
+      }
     }
-    @media screen and(max-width: $mobile) {
-      max-width: auto;
+    &__content {
+      margin: 0 auto;
+      padding: 0 15px;
+      display: flex;
+      flex-wrap: wrap;
+      @media all and (min-width: $tablet) {
+        max-width: 720px;
+        padding: 0;
+      }
+    }
+    &__item {
+      background-color: $green-back;
+      margin: 32px 0 60px 0;
+      text-align: center;
+      padding-bottom: 60px;
+      &-wrap {
+        flex-basis: 100%;
+        @media all and (min-width: $tablet) {
+          flex-basis: 49%;
+          padding: 0 15px;
+        }
+        &-first,
+        &-second {
+          @media all and (min-width: $tablet) {}
+        }
+      }
+      &-title {
+        display: inline-block;
+        line-height: 180px;
+        margin: 0 auto;
+        font-size: 16px;
+        font-weight: bold;
+        letter-spacing: 6px;
+        color: $black-text;
+        text-transform: uppercase;
+        &-round {
+          background-color: #F9F9F9;
+          margin: 50px auto 20px auto;
+          height: 180px;
+          width: 180px;
+          border-radius: 50%;
+        }
+      }
+      &-price {
+        padding: 30px;
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 6px;
+        border-bottom: solid 1px #bbc1bf;
+        color: $black-text;
+      }
+      &-list {
+        padding: 30px 0 10px 0;
+        font-size: 16px;
+        letter-spacing: 2px;
+        font-weight: bold;
+        color: $black-text;
+      }
+    }
+    &__button {
+      background-color: $white-back;
+      padding: 16px 60px;
+      border: 0;
+      box-sizing: border-box;
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: #333333;
+      box-shadow: inset 0 0 0 2px transparent;
+      position: relative;
+      vertical-align: middle;
+      &::before,
+      &::after {
+        box-sizing: inherit;
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .but-anims {
+      transition: color 0.25s;
+      &::before,
+      &::after {
+        border: 2px solid transparent;
+        width: 0;
+        height: 0;
+      }
+      &::before {
+        top: 0;
+        left: 0;
+      }
+      &::after {
+        bottom: 0;
+        right: 0;
+      }
+      &:hover::before,
+      &:hover::after {
+        width: 100%;
+        height: 100%;
+      }
+      &:hover::before {
+        border-top-color: black;
+        border-right-color: black;
+        transition: width 0.25s ease-out, // Width expands first
+        height 0.25s ease-out 0.25s; // And then height
+      }
+      &:hover::after {
+        border-bottom-color: black;
+        border-left-color: black;
+        transition: border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
+        width 0.25s ease-out 0.5s, // And then exanding width
+        height 0.25s ease-out 0.75s; // And finally height
+      }
+      &:hover {
+        background-color: #F9F9F9;
+      }
+      &::after {
+        top: 0;
+        left: 0;
+      }
+      &:hover::before {
+        border-top-color: $brown-text;
+        border-right-color: $brown-text;
+      }
+      &:hover::after {
+        border-bottom-color: $brown-text;
+        border-left-color: $brown-text;
+        transition: height 0.25s ease-out, width 0.25s ease-out 0.25s;
+      }
     }
   }
-  &__item {
-    padding: 0 30px;
-    text-align: center;
-  }
-  &__img {
-    margin: 0 auto;
-    width: 100px;
-    border-radius: 50%;
-  }
-  &__text {
-    padding: 42px 0 15px 0;
-    letter-spacing: 1px;
-    font-size: 14px;
-    line-height: 28px;
-    color: $black-text;
-  }
-  &__info {
-    letter-spacing: 1px;
-    font-size: 14px;
-    line-height: 1.1em;
-    font-weight: 500;
-    color: $white-text;
-  }
-}
