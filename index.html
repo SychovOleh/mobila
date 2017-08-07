@@ -53,15 +53,15 @@
       </div>
     </header>
     <div class="header-pusher"></div>
-    <div class="top-container">
-      <section class="top">
+    <section class="top-container">
+      <div class="top">
         <h1 class="top__title">MOBILA</h1>
         <h3 class="top__subtitle">APP LANDING PAGE</h3>
         <figure class="top__photo">
           <img class="top__photo-general" src="img/big-mobila.png" alt="mobila">
         </figure>
-      </section>
-    </div>
+      </div>
+    </section>
     <section class="features">
       <div class="features__wrapper">
         <div class="features__title-wrap">
@@ -139,12 +139,17 @@
             </p>
           </div>
         </div>
-        <div class="video__vid-wrap">
+        <div class="video__iframe-wrapper">
+          <div class="video__iframe-container">
+            <iframe class="video__iframe" width="560" height="315" src="https://www.youtube.com/embed/s-G_RZ4RJLU" frameborder="0" allowfullscreen></iframe>
+          </div>
+        </div>
+        <!-- <div class="video__vid-wrap">
           <video class="video__vid" width="100%" controls preload="none" poster="img/poster.jpg">
           <source src="src/video/vid2.mp4" class="video__vid-source" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
             The Video Tag is not supported by your browser.
           </video>
-        </div>
+        </div> -->
       </div>
     </section>
     <section class="team">
@@ -270,7 +275,7 @@
     </section>
     <section class="prices">
       <div class="prices__title-wrap">
-        <div class="prices__title">PRICING PLAN</div>
+        <h4 class="prices__title">PRICING PLAN</h4>
         <div class="prices__title-line"></div>
       </div>
       <div class="prices__content">
@@ -331,8 +336,39 @@
       </div>
     </section>
     <section class="contact">
-      
+      <div class="contact__title-wrap">
+        <h4 class="contact__title">contacts</h4>
+        <div class="contact__title-line"> </div>
+      </div>
+      <div class="contact__content">
+        <form class="contact__form" action="backEnd.js" method="post">
+          <!--DELETE SPACES BEETWEEN FORMS!!!  -->
+          <div class="contact__form-email-msg">
+            <div class="contact__form-name-wrap"><input type="text" class="contact__form-name contact__inputs" id="input__user-name" placeholder="Name"></div>
+            <div class="contact__form-email-wrap"><input type="text" class="contact__form-email contact__inputs" id="input__user-email" placeholder="Email"></div>
+          </div>
+          <div class="contact__form-msg-wrap">
+            <textarea id="msg" class="contact__form-msg contact__inputs" placeholder="Message"></textarea>
+          </div>
+          <div class="contact__form-submit-wrap">
+            <button type="submit" class="contact__form-submit contact__inputs">Send Message</button>
+          </div>
+        </form>
+      </div>
     </section>
+    <footer>
+      <div class="footer">
+        <div class="footer__icon-wrap">
+          <span class="footer__icon"></span>
+          <span class="footer__icon"></span>
+          <span class="footer__icon"></span>
+        </div>
+        <div class="footer__line"></div>
+        <div class="footer__copyright">
+          © 2017 No one | All Rights Reserved.
+        </div>
+      </div>
+    </footer>
   </div>
   <!---->
   <script src="node_modules/jquery/dist/jquery.min.js"></script>

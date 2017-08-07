@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function() {
   $('.shots__content').slick({
     slidesToShow: 4,
     slidesToScroll: 4,
@@ -31,4 +31,8 @@ $(document).ready(function() {
     slidesToShow: 1,
     autoplaySpeed: 10000
   });
+});
+$(function() {
+  $('.contact__form-submit').click(function() { return false })
+  $('.prices__button').click(function() { return false })
 });

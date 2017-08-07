@@ -105,8 +105,8 @@
         text-decoration: none;
         text-transform: uppercase;
         font-family: sans-serif;
-        display: block;
-        padding: 25px 0 18px 5px;
+        display: inline-block;
+        margin: 25px 0 18px 5px;
         &:hover {
           color: $green-text;
         }
@@ -116,7 +116,7 @@
 }
 
 .burger:checked~.nav-mobile {
-  height: 401px;
+  height: 391px;
   transition-delay: 0s;
   >ul {
     >li {

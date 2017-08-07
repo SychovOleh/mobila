@@ -21,7 +21,7 @@
     display: flex;
     margin: 0 auto;
     @media screen and (max-width: $screen-big) {
-      max-width: 970px;
+      max-width: $content-width-medium;
     }
     @media screen and (max-width: $screen-small) {
       flex-wrap: wrap;

@@ -10,10 +10,12 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^3.1.0",
     "jQuery": "^1.7.4",
     "jquery": "^3.2.1"
-  }
+  },
+  "dependencies": {}
 }
