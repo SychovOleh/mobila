@@ -29,10 +29,9 @@ $(function() {
     autoplay: true,
     speed: 500,
     slidesToShow: 1,
-    autoplaySpeed: 10000
+    autoplaySpeed: 2000
   });
-});
-$(function() {
-  $('.contact__form-submit').click(function() { return false })
-  $('.prices__button').click(function() { return false })
+  $('.prices__button').click(function() { return false }) // Deactive buttons "register"
+  $('.contact__form-submit').click(function() { return false }) // Deactive button "Send Message"
+
 });

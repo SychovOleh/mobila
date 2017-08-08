@@ -866,7 +866,7 @@ body {
       margin: 10px 20px 10px; }
 
 footer {
-  background-color: #606060; }
+  background-color: #2B2B2B; }
 
 .footer {
   max-width: 1140px;
@@ -878,5 +878,51 @@ footer {
     width: 100px;
     margin: 20px auto; }
   .footer__copyright {
+    color: #EEEEEE;
     padding-top: 10px;
-    text-align: center; }
+    text-align: center;
+    font-weight: 300; }
+  .footer__icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transition-property: background border;
+    -o-transition-property: background border;
+    transition-property: background border;
+    -webkit-transition: .5s linear;
+    -o-transition: .5s linear;
+    transition: .5s linear; }
+    .footer__icon-wrap {
+      margin: 0 auto;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      width: 143px;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between; }
+
+.f-icon1 {
+  background: url(../img/icons/fb-w.png) no-repeat;
+  border: 1px solid transparent; }
+  .f-icon1:hover {
+    background: url(../img/icons/fb-b.png) no-repeat;
+    border: 1px solid #F9F9F9; }
+
+.f-icon2 {
+  border: 1px solid transparent;
+  background: url(../img/icons/gb-w.png) no-repeat; }
+  .f-icon2:hover {
+    background: url(../img/icons/gb-b.png) no-repeat;
+    border: 1px solid #F9F9F9; }
+
+.f-icon3 {
+  border: 1px solid transparent;
+  background: url(../img/icons/in-w.png) no-repeat; }
+  .f-icon3:hover {
+    background: url(../img/icons/in-b.png) no-repeat;
+    border: 1px solid #F9F9F9; }

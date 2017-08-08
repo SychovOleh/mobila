@@ -53,23 +53,5 @@ body {
 @import "faces.scss";
 @import "prices.scss";
 @import "contact.scss";
+@import "footer.scss";
 //
-footer {
-  background-color: $brown-text;
-}
-
-.footer {
-  max-width: $content-width;
-  margin: 0 auto;
-  padding: 100px 0 40px 0;
-  &__line {
-    font-size: 0;
-    border-bottom: solid 1px #EEEEEE;
-    width: 100px;
-    margin: 20px auto;
-  }
-  &__copyright {
-      padding-top: 10px;
-    text-align: center;
-  }
-}

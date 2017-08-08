@@ -1,0 +1,63 @@
+footer {
+  background-color: $black-back;
+}
+
+.footer {
+  max-width: $content-width;
+  margin: 0 auto;
+  padding: 100px 0 40px 0;
+  &__line {
+    font-size: 0;
+    border-bottom: solid 1px #EEEEEE;
+    width: 100px;
+    margin: 20px auto;
+  }
+  &__copyright {
+    color: #EEEEEE;
+    padding-top: 10px;
+    text-align: center;
+    font-weight: 300;
+  }
+  &__icon {
+    &-wrap {
+      margin: 0 auto;
+      display: flex;
+      width: 143px;
+      justify-content: space-between;
+    }
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition-property: background border;
+    transition: .5s linear;
+  }
+}
+
+.f-icon {
+  &1 {
+    background: url(../img/icons/fb-w.png) no-repeat;
+    border: 1px solid transparent;
+    &:hover {
+      background: url(../img/icons/fb-b.png) no-repeat;
+      border: 1px solid $grey-back;
+    }
+  }
+  &2 {
+    border: 1px solid transparent;
+    background: url(../img/icons/gb-w.png) no-repeat;
+    &:hover {
+      background: url(../img/icons/gb-b.png) no-repeat;
+      border: 1px solid $grey-back;
+    }
+  }
+  &3 {
+    border: 1px solid transparent;
+    background: url(../img/icons/in-w.png) no-repeat;
+    &:hover {
+      background: url(../img/icons/in-b.png) no-repeat;
+      border: 1px solid $grey-back;
+    }
+  }
+}
