@@ -29,7 +29,7 @@ $(function() {
     autoplay: true,
     speed: 500,
     slidesToShow: 1,
-    autoplaySpeed: 2000
+    autoplaySpeed: 1500
   });
   $('.prices__button').click(function() { return false }) // Deactive buttons "register"
   $('.contact__form-submit').click(function() { return false }) // Deactive button "Send Message"
