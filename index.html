@@ -5,17 +5,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>SASS file. I don't now anything</title>
+  <title>Mobila. App landing page.</title>
+
 
   <link rel="stylesheet" type="text/css" href="slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
   <link rel="stylesheet" type="text/css" href="dest/main.css">
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/babel-polyfill/dist/polyfill.js"></script>
+  <script src="slick/slick.min.js"></script>
+  <script src="src/js/main.js"></script>
 </head>
 
 <body>
   <div class="wrapper-of-all">
     <header class="header-container">
-      <div class="nav_wrapper">
+      <section class="nav_wrapper">
         <nav class="nav">
           <a href="#" class="nav__bar-general">MOBILA.</a>
 
@@ -31,29 +36,29 @@
                 <span class="logo-mobile">MOBILA.</span>
               </div>
               <ul>
-                <li><a href="#" class="nav__mob-link">home</a></li>
-                <li><a href="#" class="nav__mob-link">features</a></li>
-                <li><a href="#" class="nav__mob-link">team</a></li>
-                <li><a href="#" class="nav__mob-link">screenshots</a></li>
-                <li><a href="#" class="nav__mob-link">pricing</a></li>
-                <li><a href="#" class="nav__mob-link">contact</a></li>
+                <li><a href="#top" class="nav__mob-link">home</a></li>
+                <li><a href="#features" class="nav__mob-link">features</a></li>
+                <li><a href="#team" class="nav__mob-link">team</a></li>
+                <li><a href="#screenshots" class="nav__mob-link">screenshots</a></li>
+                <li><a href="#pricing" class="nav__mob-link">pricing</a></li>
+                <li><a href="#contact" class="nav__mob-link">contact</a></li>
               </ul>
             </nav>
           </div>
 
           <ul class="nav__bar">
-            <li class="nav__bar-el"><a href="#" class="nav__bar-link">home</a></li>
-            <li class="nav__bar-el"><a href="#" class="nav__bar-link">features</a></li>
-            <li class="nav__bar-el"><a href="#" class="nav__bar-link">team</a></li>
-            <li class="nav__bar-el"><a href="#" class="nav__bar-link">screenshots</a></li>
-            <li class="nav__bar-el"><a href="#" class="nav__bar-link">pricing</a></li>
-            <li class="nav__bar-el"><a href="#" class="nav__bar-link nav__bar-link-last">contact</a></li>
+            <li class="nav__bar-el"><a href="#top" class="nav__bar-link">home</a></li>
+            <li class="nav__bar-el"><a href="#features" class="nav__bar-link">features</a></li>
+            <li class="nav__bar-el"><a href="#team" class="nav__bar-link">team</a></li>
+            <li class="nav__bar-el"><a href="#screenshots" class="nav__bar-link">screenshots</a></li>
+            <li class="nav__bar-el"><a href="#pricing" class="nav__bar-link">pricing</a></li>
+            <li class="nav__bar-el"><a href="#contact" class="nav__bar-link nav__bar-link-last">contact</a></li>
           </ul>
         </nav>
-      </div>
+      </section>
     </header>
     <div class="header-pusher"></div>
-    <section class="top-container">
+    <section class="top-container" id="top">
       <div class="top">
         <h1 class="top__title">MOBILA</h1>
         <h3 class="top__subtitle">APP LANDING PAGE</h3>
@@ -62,7 +67,7 @@
         </figure>
       </div>
     </section>
-    <section class="features">
+    <section class="features" id="features">
       <div class="features__wrapper">
         <div class="features__title-wrap">
           <div class="features__item-title-wrap">
@@ -92,13 +97,13 @@
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteu sunt in culpa qui officia deserunt mollit anim id .
               </p>
             </div>
-          </div>
-          <div class="features__content-block features__content-block-second">
+          </div><!-- 
+           --><div class="features__content-block features__content-block-second">
             <figure class="features__image-wrap ">
               <img src="img/vertiical-mobile.png" alt="Vertical mobile" class="features__image">
             </figure>
-          </div>
-          <div class="features__content-block features__content-block-third">
+          </div><!-- 
+          --><div class="features__content-block features__content-block-third">
             <div class="features__item features__item-last-block">
               <div class="features__item-title-wrap ">
                 <img src="img/icons/cloud.PNG " alt="cloud-icon" class="features__item-icon ">
@@ -108,8 +113,7 @@
               <p class="features__item-text ">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteu sunt in culpa qui officia deserunt mollit anim id .
               </p>
-            </div>
-            <div class="features__item features__item-last-block">
+            </div><div class="features__item features__item-last-block">
               <div class="features__item-title-wrap ">
                 <img src="img/icons/mobiles.PNG " alt="cloud-icon " class="features__item-icon ">
                 <h5 class="features__item-title ">TOTALLY FREE</h5>
@@ -151,7 +155,7 @@
         </div> -->
       </div>
     </section>
-    <section class="team">
+    <section class="team" id="team">
       <div class="team__wrapper">
         <div class="team__title-wrap">
           <div class="team__item-title-wrap">
@@ -190,7 +194,7 @@
         </div>
       </div>
     </section>
-    <section class="shots">
+    <section class="shots" id="screenshots">
       <div class="shots__title-wrap">
         <div class="shots__title">Screenshots</div>
         <div class="shots__title-line"></div>
@@ -272,7 +276,7 @@
         </div>
       </div>
     </section>
-    <section class="prices">
+    <section class="prices" id="pricing">
       <div class="prices__title-wrap">
         <h4 class="prices__title">PRICING PLAN</h4>
         <div class="prices__title-line"></div>
@@ -291,7 +295,7 @@
               <li class="prices__item-list">1 GB SPACE</li>
               <li class="prices__item-list">20 MORE THEMES</li>
             </ul>
-            <a class="praices__button-wrap" href="#">
+            <a class="prices__button-wrap" href="#">
               <button class="prices__button but-anims">Register</button>
             </a>
           </div>
@@ -334,7 +338,7 @@
         </div>
       </div>
     </section>
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="contact__title-wrap">
         <h4 class="contact__title">contacts</h4>
         <div class="contact__title-line"> </div>
@@ -358,7 +362,7 @@
       </div>
     </section>
     <footer>
-      <div class="footer">
+      <section class="footer">
         <div class="footer__icon-wrap">
           <a class="footer__icon f-icon1" href="https://www.facebook.com/"></a>
           <a class="footer__icon f-icon2" href="https://www.google.com/"></a>
@@ -368,13 +372,11 @@
         <div class="footer__copyright">
           © 2017 No one | All Rights Reserved.
         </div>
-      </div>
+      </section>
     </footer>
   </div>
   <!---->
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="slick/slick.min.js"></script>
-  <script src="src/js/main.js"></script>
+
 </body>
 
 </html>

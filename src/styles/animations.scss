@@ -1,6 +1,6 @@
 @keyframes bounceIn {
   0% {
-    transform: scale(.3);
+    transform: scale(.4);
   }
   80% {
     transform: scale(1.1);
@@ -14,7 +14,7 @@
 }
 
 .top__photo-general {
-  animation: bounceIn .5s;
+  animation: bounceIn .8s .3s backwards;
 }
 
 // 
@@ -22,16 +22,16 @@
 @keyframes bounceInDown {
   0% {
     opacity: 0;
-    transform: translate(0, -3000px);
+    transform: translate(0, -1000px);
   }
   60% {
-    opacity: 1;
     transform: translate(0, 25px);
   }
   75% {
     transform: translate(0, -10px);
   }
   90% {
+    opacity: 1;
     transform: translate(0, 5px);
   }
   to {
@@ -39,9 +39,35 @@
   }
 }
 
-.features__image {
-  animation: bounceInDown 1s;
+.features__image.start-animate {
+  animation: bounceInDown 1.2s 0.3s backwards;
 }
 
-// 
-// 
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translate(-100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.video__content.start-animate{
+  animation: fadeInLeft .7s .2s backwards;
+}
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate(100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.video__iframe-container.start-animate{
+  animation: fadeInRight .7s .2s backwards;
+}

@@ -39,12 +39,13 @@
   }
   &__item {
     background-color: $green-back;
+    border-radius: 7px;
     margin: 32px 0 60px 0;
     text-align: center;
     padding: 60px;
-    position: relative; // transition-property: left, top, box-shadow;
-    left: 0;
+    position: relative;
     top: 0;
+    box-shadow: 0 0 4px 1px rgba(128, 128, 128, .5);
     cursor: pointer;
     transition-property: top, box-shadow;
     transition: .5s linear;

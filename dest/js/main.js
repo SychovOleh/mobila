@@ -1,4 +1,6 @@
-$(function() {
+'use strict';
+
+$(function () {
   $('.shots__content').slick({
     slidesToShow: 4,
     slidesToScroll: 4,
@@ -8,7 +10,7 @@ $(function() {
       breakpoint: 1200,
       settings: {
         slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToScroll: 3
       }
     }, {
       breakpoint: 769,
@@ -32,22 +34,26 @@ $(function() {
     autoplaySpeed: 1500
   });
 
-  $('.prices__button').click(function() { return false }) // Deactive buttons "register"
-  $('.contact__form-submit').click(function() { return false }) // Deactive button "Send Message"
-  
+  $('.prices__button').click(function () {
+    return false;
+  }); // Deactive buttons "register"
+  $('.contact__form-submit').click(function () {
+    return false;
+  }); // Deactive button "Send Message"
+
   function animateNow(animationTarget) {
     function isElementInViewport(elem) {
       var $elem = $(elem);
 
       // Get the scroll position of the page.
-      var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
+      var scrollElem = navigator.userAgent.toLowerCase().indexOf('webkit') != -1 ? 'body' : 'html';
       var viewportTop = $(scrollElem).scrollTop();
       var viewportBottom = viewportTop + $(window).height();
 
       // Get the position of the element on the page.
       var elemTop = Math.round($elem.offset().top);
       var elemBottom = elemTop + $elem.height();
-      return ((elemTop < viewportBottom) && (elemBottom > viewportTop));
+      return elemTop < viewportBottom && elemBottom > viewportTop;
     }
     // Check if it's time to start the animation.
     function checkAnimation() {
@@ -58,19 +64,19 @@ $(function() {
         $elem.addClass('start-animate');
       }
     }
-    $(window).scroll(function() {
+    $(window).scroll(function () {
       checkAnimation();
     });
   }
   var verticalImg = document.querySelectorAll('.features__image')[0];
   var videoContent = document.querySelectorAll('.video__content')[0];
   var videoIframe = document.querySelectorAll('.video__iframe-container')[0];
-  animateNow(verticalImg)
-  animateNow(videoContent)
-  animateNow(videoIframe)
+  animateNow(verticalImg);
+  animateNow(videoContent);
+  animateNow(videoIframe);
 
-  $('.prices__item').click(function() {
+  $('.prices__item').click(function () {
     var a = $(this).find('.prices__button-wrap').attr('href');
     window.location.replace(a);
-  })
-})
+  });
+});
