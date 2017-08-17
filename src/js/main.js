@@ -1,3 +1,31 @@
+function animateNow(animationTarget) {
+  function isElementInViewport(elem) {
+    let $elem = $(elem);
+
+    // Get the scroll position of the page.
+    let scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
+    let viewportTop = $(scrollElem).scrollTop();
+    let viewportBottom = viewportTop + $(window).height();
+
+    // Get the position of the element on the page.
+    let elemTop = Math.round($elem.offset().top);
+    let elemBottom = elemTop + $elem.height();
+    return ((elemTop < viewportBottom) && (elemBottom > viewportTop));
+  }
+  // Check if it's time to start the animation.
+  function checkAnimation() {
+    let $elem = $(animationTarget);
+
+    if ($elem.hasClass('start-animate')) return;
+    if (isElementInViewport($elem)) {
+      $elem.addClass('start-animate');
+    }
+  }
+  $(window).scroll(function() {
+    checkAnimation();
+  });
+}
+
 $(function() {
   $('.shots__content').slick({
     slidesToShow: 4,
@@ -34,43 +62,16 @@ $(function() {
 
   $('.prices__button').click(function() { return false }) // Deactive buttons "register"
   $('.contact__form-submit').click(function() { return false }) // Deactive button "Send Message"
-  
-  function animateNow(animationTarget) {
-    function isElementInViewport(elem) {
-      var $elem = $(elem);
+  $('.prices__item').click(function() { // go to button link when you push ".prices__item"
+    let buttonHref = $(this).find('.prices__button-wrap').attr('href');
+    window.location.replace(buttonHref);
+  })
 
-      // Get the scroll position of the page.
-      var scrollElem = ((navigator.userAgent.toLowerCase().indexOf('webkit') != -1) ? 'body' : 'html');
-      var viewportTop = $(scrollElem).scrollTop();
-      var viewportBottom = viewportTop + $(window).height();
-
-      // Get the position of the element on the page.
-      var elemTop = Math.round($elem.offset().top);
-      var elemBottom = elemTop + $elem.height();
-      return ((elemTop < viewportBottom) && (elemBottom > viewportTop));
-    }
-    // Check if it's time to start the animation.
-    function checkAnimation() {
-      var $elem = $(animationTarget);
-
-      if ($elem.hasClass('start-animate')) return;
-      if (isElementInViewport($elem)) {
-        $elem.addClass('start-animate');
-      }
-    }
-    $(window).scroll(function() {
-      checkAnimation();
-    });
-  }
-  var verticalImg = document.querySelectorAll('.features__image')[0];
-  var videoContent = document.querySelectorAll('.video__content')[0];
-  var videoIframe = document.querySelectorAll('.video__iframe-container')[0];
+  let verticalImg = document.querySelectorAll('.features__image')[0] ;
   animateNow(verticalImg)
+  let videoContent = document.querySelectorAll('.video__content')[0];
   animateNow(videoContent)
+  let videoIframe = document.querySelectorAll('.video__iframe-container')[0];
   animateNow(videoIframe)
 
-  $('.prices__item').click(function() {
-    var a = $(this).find('.prices__button-wrap').attr('href');
-    window.location.replace(a);
-  })
 })

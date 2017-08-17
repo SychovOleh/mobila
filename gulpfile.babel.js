@@ -18,7 +18,9 @@ gulp.task('sass', function() {
 
 gulp.task("build", function() {
   return gulp.src("./src/js/*.js")
-    .pipe(babel())
+    .pipe(babel({
+      "presets": ["es2015"]
+    }))
     .pipe(gulp.dest("./dest/js"));
 });
 

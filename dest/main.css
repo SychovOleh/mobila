@@ -1046,8 +1046,8 @@ footer {
     transform: none; } }
 
 .features__image.start-animate {
-  -webkit-animation: bounceInDown 1.2s 0.3s backwards;
-  animation: bounceInDown 1.2s 0.3s backwards; }
+  -webkit-animation: bounceInDown 1.1s .3s backwards;
+  animation: bounceInDown 1.1s .3s backwards; }
 
 @-webkit-keyframes fadeInLeft {
   0% {
